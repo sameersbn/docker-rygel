@@ -27,7 +27,7 @@ docker build -t="$USER/rygel" .
 Run the image
 
 ```
-docker run --name=rygel -it --rm \
+docker run --name=rygel -it --rm --net=host \
 -v /path/to/music:/music \
 -v /path/to/videos:/videos \
 -v /path/to/pictures:/pictures \
@@ -35,6 +35,8 @@ sameersbn/rygel:latest
 ```
 
 This will start the rygel server and you should now be able to browse the content on DLNA/uPNP compatible devices.
+
+*P.S. You should run the image with host networking so that the server can be discovered over mDNS*
 
 # Upgrading
 To upgrade to newer releases, simply follow this 3 step upgrade procedure.
@@ -54,5 +56,5 @@ docker stop rygel
 - **Step 3**: Start the image
 
 ```
-docker run --name=rygel -d [OPTIONS] sameersbn/rygel:latest
+docker run --name=rygel --net=host -d [OPTIONS] sameersbn/rygel:latest
 ```
