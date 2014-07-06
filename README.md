@@ -2,6 +2,7 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Cache Store](#cache-store)
 - [Upgrading](#upgrading)
 
 # Introduction
@@ -37,6 +38,16 @@ sameersbn/rygel:latest
 This will start the rygel server and you should now be able to browse the content on DLNA/uPNP compatible devices.
 
 *P.S. You should run the image with host networking so that the server can be discovered over mDNS*
+
+# Cache Store
+You should mount a volume at `/.cache` for the cache.
+
+```
+docker run --name=rygel --net=host -d \
+-v /path/to/music:/music -v /path/to/videos:/videos \
+-v /path/to/pictures:/pictures -v /opt/rygel:/.cache \
+sameersbn/rygel:latest
+```
 
 # Upgrading
 To upgrade to newer releases, simply follow this 3 step upgrade procedure.
