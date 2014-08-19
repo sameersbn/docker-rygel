@@ -6,7 +6,7 @@ RUN add-apt-repository -y ppa:yg-jensge/gupnp && \
 		apt-get install -y rygel tumbler gstreamer1.0-plugins-base \
 			gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
 			gstreamer1.0-plugins-ugly gstreamer1.0-libav && \
-		apt-get clean # 20140628
+		apt-get clean && rm -rf /var/lib/apt/lists/* # 20140818
 
 ADD rygel.conf /.config/
 
