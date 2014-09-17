@@ -1,11 +1,11 @@
 FROM sameersbn/debian:jessie.20140918
 MAINTAINER sameer@damagehead.com
 
-RUN apt-get update && \
-    apt-get install -y rygel tumbler gstreamer1.0-plugins-base \
+RUN apt-get update \
+ && apt-get install -y rygel tumbler gstreamer1.0-plugins-base \
       gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
-      gstreamer1.0-plugins-ugly gstreamer1.0-libav && \
-    rm -rf /var/lib/apt/lists/* # 20140918
+      gstreamer1.0-plugins-ugly gstreamer1.0-libav \
+ && rm -rf /var/lib/apt/lists/* # 20140918
 
 ADD rygel.conf /.config/
 
