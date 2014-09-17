@@ -1,12 +1,11 @@
-FROM sameersbn/ubuntu:14.04.20140818
+FROM sameersbn/debian:jessie.20140918
 MAINTAINER sameer@damagehead.com
 
-RUN add-apt-repository -y ppa:yg-jensge/gupnp && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -y rygel tumbler gstreamer1.0-plugins-base \
       gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
       gstreamer1.0-plugins-ugly gstreamer1.0-libav && \
-    rm -rf /var/lib/apt/lists/* # 20140818
+    rm -rf /var/lib/apt/lists/* # 20140918
 
 ADD rygel.conf /.config/
 
