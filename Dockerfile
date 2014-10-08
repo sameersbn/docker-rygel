@@ -1,7 +1,9 @@
-FROM sameersbn/debian:jessie.20141001
+FROM sameersbn/ubuntu:14.04.20141001
 MAINTAINER sameer@damagehead.com
 
-RUN apt-get update \
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
+ && echo "deb http://ppa.launchpad.net/yg-jensge/gupnp/ubuntu trusty main" >> /etc/apt/sources.list \
+ && apt-get update \
  && apt-get install -y rygel tumbler gstreamer1.0-plugins-base \
       gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
       gstreamer1.0-plugins-ugly gstreamer1.0-libav \
