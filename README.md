@@ -1,12 +1,22 @@
 # Table of Contents
 - [Introduction](#introduction)
+- [Contributing](#contributing)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Cache Store](#cache-store)
 - [Upgrading](#upgrading)
 
 # Introduction
+
 Dockerfile to build a Rygel DLNA/uPNP server docker image.
+
+# Contributing
+
+If you find this image useful here's how you can help:
+
+- Send a Pull Request with your awesome new features and bug fixes
+- Help new users with [Issues](https://github.com/sameersbn/docker-rygel/issues) they may encounter
+- Send me a tip on [Gittip](https://gittip.com/sameersbn/) or using Bitcoin at **16rDxVqJPyYAFYPLduTaSiwe7ZiY1hHqKM**
 
 # Installation
 
@@ -25,6 +35,7 @@ docker build -t="$USER/rygel" .
 ```
 
 # Quick Start
+
 Run the image
 
 ```
