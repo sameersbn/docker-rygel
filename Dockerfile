@@ -19,4 +19,4 @@ VOLUME ["/videos"]
 VOLUME ["/music"]
 VOLUME ["/pictures"]
 
-CMD ["/usr/bin/rygel"]
+CMD ["/usr/bin/rygel", "-c", "/.config/rygel.conf" ]
