@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
       gstreamer1.0-plugins-ugly gstreamer1.0-libav \
  && rm -rf /var/lib/apt/lists/* # 20140918
 
-ADD rygel.conf /.config/
+ADD rygel.conf /root/.config/
 
 EXPOSE 8000
 EXPOSE 1900/udp
@@ -19,4 +19,4 @@ VOLUME ["/videos"]
 VOLUME ["/music"]
 VOLUME ["/pictures"]
 
-CMD ["/usr/bin/rygel", "-c", "/.config/rygel.conf" ]
+CMD ["/usr/bin/rygel" ]
