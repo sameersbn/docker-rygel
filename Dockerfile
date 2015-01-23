@@ -14,7 +14,7 @@ ADD rygel.conf /.config/
 EXPOSE 8000
 EXPOSE 1900/udp
 
-VOLUME ["/.cache"]
+VOLUME ["/root/.cache/rygel"]
 VOLUME ["/videos"]
 VOLUME ["/music"]
 VOLUME ["/pictures"]
