@@ -1,4 +1,4 @@
-FROM sameersbn/ubuntu:14.04.20150712
+FROM sameersbn/ubuntu:14.04.20150805
 MAINTAINER sameer@damagehead.com
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
@@ -7,7 +7,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
  && apt-get install -y rygel tumbler gstreamer1.0-plugins-base \
       gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
       gstreamer1.0-plugins-ugly gstreamer1.0-libav \
- && rm -rf /var/lib/apt/lists/* # 20150712
+ && rm -rf /var/lib/apt/lists/*
 
 ADD rygel.conf /root/.config/
 
