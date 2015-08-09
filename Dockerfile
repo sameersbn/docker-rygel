@@ -1,6 +1,11 @@
 FROM sameersbn/ubuntu:14.04.20150805
 MAINTAINER sameer@damagehead.com
 
+ENV RYGEL_CACHE_DIR=/root/.cache/rygel \
+    RYGEL_VIDEOS_DIR=/videos \
+    RYGEL_MUSIC_DIR=/music \
+    RYGEL_PICTURES_DIR=/pictures
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
  && echo "deb http://ppa.launchpad.net/yg-jensge/gupnp/ubuntu trusty main" >> /etc/apt/sources.list \
  && apt-get update \
@@ -11,5 +16,5 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
 
 COPY rygel.conf /root/.config/
 EXPOSE 8000/tcp 1900/udp
-VOLUME ["/root/.cache/rygel", "/videos", "/music", "/pictures"]
+VOLUME ["${RYGEL_CACHE_DIR}", "${RYGEL_VIDEOS_DIR}", "${RYGEL_MUSIC_DIR}", "${RYGEL_PICTURES_DIR}"]
 CMD ["/usr/bin/rygel" ]
