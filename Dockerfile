@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
       gstreamer1.0-plugins-ugly gstreamer1.0-libav \
  && rm -rf /var/lib/apt/lists/*
 
-ADD rygel.conf /root/.config/
+COPY rygel.conf /root/.config/
 
 EXPOSE 8000
 EXPOSE 1900/udp
