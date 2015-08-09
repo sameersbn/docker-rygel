@@ -11,9 +11,5 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv B84401E3 \
 
 COPY rygel.conf /root/.config/
 EXPOSE 8000/tcp 1900/udp
-VOLUME ["/root/.cache/rygel"]
-VOLUME ["/videos"]
-VOLUME ["/music"]
-VOLUME ["/pictures"]
-
+VOLUME ["/root/.cache/rygel", "/videos", "/music", "/pictures"]
 CMD ["/usr/bin/rygel" ]
