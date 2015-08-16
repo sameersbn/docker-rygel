@@ -1,4 +1,4 @@
-FROM sameersbn/ubuntu:14.04.20150805
+FROM sameersbn/ubuntu:14.04.20150816
 MAINTAINER sameer@damagehead.com
 
 ENV RYGEL_CACHE_DIR=/root/.cache/rygel \
