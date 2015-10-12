@@ -1,3 +1,5 @@
+[![Docker Repository on Quay.io](https://quay.io/repository/sameersbn/rygel/status "Docker Repository on Quay.io")](https://quay.io/repository/sameersbn/rygel)
+
 # Table of Contents
 - [Introduction](#introduction)
 - [Contributing](#contributing)
