@@ -23,10 +23,12 @@ If you find this image useful here's how you can help:
 
 # Installation
 
-Automated builds of the image are available on [Quay.io](https://quay.io/repository/sameersbn/rygel) and is the recommended method of installation.
+Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/sameersbn/rygel) and is the recommended method of installation.
+
+> **Note**: Builds are also available on [Quay.io](https://quay.io/repository/sameersbn/rygel)
 
 ```
-docker pull quay.io/sameersbn/rygel:latest
+docker pull sameersbn/rygel:latest
 ```
 
 Alternately you can build the image yourself.
@@ -46,7 +48,7 @@ docker run --name=rygel -it --rm --net=host \
 -v /path/to/music:/music \
 -v /path/to/videos:/videos \
 -v /path/to/pictures:/pictures \
-quay.io/sameersbn/rygel:latest
+sameersbn/rygel:latest
 ```
 
 This will start the rygel server and you should now be able to browse the content on DLNA/uPNP compatible devices.
@@ -60,7 +62,7 @@ You should mount a volume at `/.cache` for the cache.
 docker run --name=rygel --net=host -d \
 -v /path/to/music:/music -v /path/to/videos:/videos \
 -v /path/to/pictures:/pictures -v /opt/rygel:/.cache \
-quay.io/sameersbn/rygel:latest
+sameersbn/rygel:latest
 ```
 
 # Shell Access
@@ -95,7 +97,7 @@ To upgrade to newer releases, simply follow this 3 step upgrade procedure.
 - **Step 1**: Update the docker image.
 
 ```
-docker pull quay.io/sameersbn/rygel:latest
+docker pull sameersbn/rygel:latest
 ```
 
 - **Step 1**: Stop the currently running image
@@ -107,5 +109,5 @@ docker stop rygel
 - **Step 3**: Start the image
 
 ```
-docker run --name=rygel --net=host -d [OPTIONS] quay.io/sameersbn/rygel:latest
+docker run --name=rygel --net=host -d [OPTIONS] sameersbn/rygel:latest
 ```
