@@ -34,9 +34,7 @@ docker pull sameersbn/rygel:latest
 Alternately you can build the image yourself.
 
 ```
-git clone https://github.com/sameersbn/docker-rygel.git
-cd docker-rygel
-docker build -t="$USER/rygel" .
+docker build -t sameersbn/rygel github.com/sameersbn/docker-rygel
 ```
 
 # Quick Start
